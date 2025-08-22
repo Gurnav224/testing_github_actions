@@ -11,24 +11,26 @@ jobs:
     uses: Gurnav224/.github/.github/workflows/pr-guard.yml@main
     permissions:
       contents: write
-      pull-requests: write   # needed for commenting on PR
+      pull-requests: write
 
   prettier:
     if: github.event_name == 'pull_request' && github.base_ref == 'dev'
     uses: Gurnav224/.github/.github/workflows/prettier.yml@main
     permissions:
       contents: write
-      pull-requests: write   # needed for commenting on PR
+      pull-requests: write
 
   ruff:
     if: github.event_name == 'pull_request' && github.base_ref == 'dev'
     uses: Gurnav224/.github/.github/workflows/ruff.yml@main
     permissions:
       contents: write
-      pull-requests: write   # needed for commenting on PR
+      pull-requests: write
 
   security:
     uses: Gurnav224/.github/.github/workflows/security.yml@main
     permissions:
-      contents: write       # Security workflow doesn’t need PR commenting
+      contents: read
+      actions: read
       security-events: write
+      pull-requests: write
