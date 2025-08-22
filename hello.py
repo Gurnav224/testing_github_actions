@@ -16,3 +16,5 @@ print('add the changes')
 print('remove the permissions from the global CI/CD workflow')
 
 print('add the permissions to each job in the CI/CD workflow')
+
+print('now the pr checks should work as expected')
