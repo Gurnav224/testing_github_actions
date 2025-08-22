@@ -6,4 +6,4 @@ on:
 
 jobs:
   call-hello:
-    uses: Gurnav224/.github/.github/workflows/hello.yml@main
+    uses: Gurnav224/.github/.github/workflows/hello.yml@master
