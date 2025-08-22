@@ -1,0 +1,22 @@
+name: Global CI/CD
+
+on:
+  pull_request:
+    branches: [main, dev]
+  push:
+
+jobs:
+  pr-guard:
+    if: github.event_name == 'pull_request' && github.base_ref == 'main'
+    uses: Gurnav224/.github/.github/workflows/pr-guard.yml@main
+
+  prettier:
+    if: github.event_name == 'pull_request' && github.base_ref == 'dev'
+    uses: Gurnav224/.github/.github/workflows/prettier.yml@main
+
+  ruff:
+    if: github.event_name == 'pull_request' && github.base_ref == 'dev'
+    uses: Gurnav224/.github/.github/workflows/ruff.yml@main 
+
+  security:
+    uses: Gurnav224/.github/.github/workflows/security.yml@main
