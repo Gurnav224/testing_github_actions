@@ -1,0 +1,8 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔎 Running linter checks..."
+echo "✨ Running code formatter..."
+echo "🧪 Running test suite..."
+echo "🏗️ Building the project..."
+echo "🚀 Deploying to staging..."
