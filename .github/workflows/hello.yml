@@ -1,0 +1,9 @@
+name: Hello World Caller
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  call-hello:
+    uses: Gurnav224/.github/.github/workflows/hello.yml@main
