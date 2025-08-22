@@ -34,5 +34,5 @@ jobs:
       actions: read
       security-events: write
     with:
-      base_ref: ${{ github.event.pull_request.base.ref || github.ref_name }}
-      head_ref: ${{ github.event.pull_request.head.ref || github.sha }}
+      base_ref: ${{ github.event.pull_request.base.ref != '' && github.event.pull_request.base.ref || github.ref_name }}
+      head_ref: ${{ github.event.pull_request.head.ref != '' && github.event.pull_request.head.ref || github.sha }}
